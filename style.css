@@ -1,0 +1,590 @@
+/* =====================
+   RESET & GLOBAL
+===================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background:#f4f6f9;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  color:#1f2933;
+  line-height:1.8;
+}
+
+p{
+  max-width:900px;
+  margin:15px auto;
+  font-size:18px;
+  text-align:center;
+}
+
+h1{
+  margin:60px 20px 25px;
+  text-align:center;
+  font-size:34px;
+  color:#0a1a2f;
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:25px;
+  color:#0a1a2f;
+}
+
+h3{
+  font-size:20px;
+  margin-top:25px;
+  color:#374151;
+}
+/* =====================
+   NAVIGATION (ARRU'YA)
+===================== */
+
+.arruya-nav{
+  background:#0b2341;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:gold;
+}
+
+.menu{
+  display:flex;
+  gap:30px;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+  transition:0.3s;
+}
+
+.menu a:hover{
+  color:gold;
+}
+
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:gold;
+  transition:0.3s;
+}
+
+.menu a:hover::after{
+  width:100%;
+}
+/* =====================
+   HERO ARRUYA
+===================== */
+
+.hero-arruya{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  padding:60px 80px;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color:white;
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.hero-arruya h1{
+  font-size:42px;
+  line-height:1.3;
+  margin-bottom:20px;
+  color:#b08e1e;
+}
+
+.hero-arruya p{
+  font-size:18px;
+  color:#ffffff;
+  line-height:1.7;
+}
+/* =====================
+   KONTEN KATEGORI
+===================== */
+
+.kategori{
+  max-width:900px;
+  margin:60px auto;
+  padding:45px;
+  background-color:#ffffff;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+
+.kategori ul{
+  margin-top:12px;
+  padding-left:22px;
+}
+
+.kategori li{
+  margin-bottom:10px;
+  font-size:17px;
+}
+
+.kategori li strong{
+  color:#0a1a2f;
+}
+/* =====================
+   PRODUK
+===================== */
+
+.daftar-produk{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  gap:30px;
+  padding:20px;
+}
+
+.produk{
+  background:#ffffff;
+  border-radius:10px;
+  padding:15px;
+  text-align:center;
+  position:relative;
+  transition:0.3s;
+  cursor:pointer;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.produk:hover{
+  transform:translateY(-4px);
+  box-shadow:0 6px 15px rgba(10,26,47,0.15);
+}
+
+.produk img{
+  width:150px;
+  border-radius:5px;
+  margin-bottom:10px;
+  transition:0.3s;
+}
+
+.produk:hover img{
+  transform:scale(1.03);
+}
+
+.produk h3{
+  font-size:16px;
+  color:#0a1a2f;
+}
+
+.harga{
+  font-size:30px;
+  font-weight:bold;
+  color:#0a1a2f;
+}
+
+.produk:hover .harga{
+  color:#d4af37;
+}
+
+.deskripsi{
+  font-size:18px;
+  text-align:center;
+}
+/* =====================
+   BEDAH BUKU CMS
+===================== */
+
+.artikel{
+  max-width:900px;
+  margin: 40px auto 0;
+  padding-bottom:60px; 
+}
+
+.buku-bedah{
+  background:#ffffff;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(10,26,47,0.08);
+  margin-bottom:60px;
+}
+
+.buku-bedah h2{
+  color:#0a1a2f;
+  margin-bottom:8px;
+}
+
+.buku-bedah .penulis{
+  font-style:italic;
+  color:#6b7280;
+  margin-bottom:25px;
+}
+
+.buku-bedah .sampul{
+  width:220px;
+  float:right;
+  margin:0 0 20px 30px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.buku-bedah p{
+  font-size:17px;
+  line-height:1.9;
+  text-align:justify;
+  margin-bottom:18px;
+}
+
+.buku-bedah blockquote{
+  margin:30px 0;
+  padding:20px 25px;
+  background:#f8fafc;
+  border-left:5px solid #d4af37;
+  font-style:italic;
+  color:#0a1a2f;
+}
+
+.buku-bedah blockquote p:first-child{
+  font-size:20px;
+  text-align:right;
+  font-family:"Amiri", serif;
+}
+
+.buku-bedah::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+/* =====================
+   CARD CMS BUKU
+===================== */
+
+.buku-wrapper{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:24px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.buku-card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:24px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.buku-card:hover{
+  transform:translateY(-6px);
+}
+
+.buku-card h3{
+  background:#f8fafc;
+  box-shadow:0 8px 20px rgba(10,26,47,0.08);
+}
+
+.buku-card ul{
+  padding-left:18px;
+  line-height:1.6;
+}
+/* =====================
+   FORMULIR TESTIMONI
+===================== */
+
+.testimoni-section{
+  padding:40px 16px;
+  background:#f4f6f8;
+}
+
+.formulir{
+  background:white;
+  width:85%;
+  max-width:900px;
+  margin:40px auto;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  flex:1;
+}
+
+.formulir h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:#0b2341;
+}
+
+form label{
+  display:block;
+  margin-top:14px;
+  margin-bottom:6px;
+  font-weight:600;
+  color:#0a1a2f;
+}
+
+form input,
+form textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+form input:focus,
+form textarea:focus{
+  outline:none;
+  border-color:#c9a227;
+  box-shadow:0 0 0 2px rgba(201,162,39,0.2);
+}
+
+form button{
+  margin-top:22px;
+  width:100%;
+  padding:12px;
+  background:#c9a227;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:#b08e1e;
+}
+/* =====================
+   TESTIMONI BOX
+===================== */
+
+.testimoni-box{
+  background:#f8fafc;
+  border-left:5px solid gold;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.testimoni-box:hover{
+  transform:translateY(-3px);
+}
+
+.testimoni-box p{
+  margin:6px 0;
+  color:#333;
+}
+
+#hapusSemua{
+  display:block;
+  margin:20px auto 0;
+  padding:12px 22px;
+  border:none;
+  border-radius:8px;
+  background:#0b2341;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#hapusSemua:hover{
+  background:gold;
+  color:#0b2341;
+}
+/* =====================
+   KONFIRMASI
+===================== */
+
+.konfirmasi{
+  background:white;
+  width:85%;
+  max-width:850px;
+  margin:60px auto;
+  padding:50px 30px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  text-align:center;
+  animation:fadeIn 0.7s ease;
+  position:relative;
+}
+
+.konfirmasi::before{
+  content:"✓";
+  position:absolute;
+  top:-30px;
+  left:50%;
+  transform:translateX(-50%);
+  background:gold;
+  color:#0b2341;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  font-weight:bold;
+}
+
+.konfirmasi h1{
+  font-size:36px;
+  line-height:1.4;
+}
+
+.konfirmasi h1 a{
+  display:block;
+  background:#0b2341;
+  color:white;
+  padding:18px;
+  border-radius:12px;
+  text-decoration:none;
+  margin:25px auto;
+  max-width:500px;
+  font-size:26px;
+  font-weight:bold;
+}
+
+.konfirmasi > a{
+  display:inline-block;
+  margin-top:20px;
+  background:#0b2341;
+  color:white;
+  padding:12px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:20px;
+}
+
+.testimoni-terkirim{
+  margin-top:25px;
+  padding:20px;
+  border-radius:12px;
+  background:#f8fafc;
+  border-left:6px solid gold;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  text-align:left;
+  font-size:18px;
+}
+
+.testimoni-terkirim:empty{
+  display:none;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+/* =====================
+   BUTTON
+===================== */
+
+/* Tombol kembali */
+.btn-kembali{
+  display:inline-block;
+  margin-top:30px;
+  padding:10px 16px;
+  background:#0a1a2f;
+  color:#d4af37;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.btn-kembali:hover{
+  background:#071425;
+}
+
+
+/* Tombol hapus semua */
+#hapusSemua{
+  display:block;
+  margin:20px auto 0;
+  padding:12px 22px;
+  border:none;
+  border-radius:8px;
+  background:#0b2341;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#hapusSemua:hover{
+  background:gold;
+  color:#0b2341;
+}
+
+
+/* Tombol konfirmasi besar */
+.konfirmasi h1 a{
+  display:block;
+  background:#0b2341;
+  color:white;
+  padding:18px;
+  border-radius:12px;
+  text-decoration:none;
+  margin:25px auto;
+  max-width:500px;
+  font-size:26px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.konfirmasi h1 a:hover{
+  background:gold;
+  color:#0b2341;
+  transform:scale(1.03);
+}
+
+
+/* Tombol kirim lagi */
+.konfirmasi > a{
+  display:inline-block;
+  margin-top:20px;
+  background:#0b2341;
+  color:white;
+  padding:12px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:20px;
+  transition:0.3s;
+}
+
+.konfirmasi > a:hover{
+  background:gold;
+  color:#0b2341;
+}
+/* =====================
+   FOOTER
+===================== */
+
+.footer{
+  background:#0b2341;
+  color:gold;
+  text-align:center;
+  padding:20px;
+  margin-top:auto;
+}
